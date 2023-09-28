@@ -6,12 +6,12 @@ export const Hero = () => {
  
 
   return (
-    <div className='hero'>
+    <div className='hero '>
       <div className='flex-1 pt-36 padding-x'>
         <h1 className='hero__title'> 
-        Qualidade por equipe experiente.</h1>
+        Digija seus sonhos hoje!</h1>
         <p className='hero__subtitle'>
-        Estamos aqui para fornecer aos nosso clientes a mais alta qualidade de serviços.com nossa dedicação á satisfação dp cliente,voçê pode ter certeza de que terá uma ótima experiência.
+        Expermente a liberdade da estrada com o aluguel de carros RodoAluga.Escolha entre uma variedade de veículos para atender ás suas necessidades.
        </p>
        <CustomButton 
        
@@ -23,11 +23,12 @@ export const Hero = () => {
       </div>
       <div className='hero__image-container'>
       <div className='hero__image'>
-        <Image src='/icon/hero-bg.png' alt='hero bg'
+        <Image src='/img/hero_photo.svg' alt='hero bg'
         fill className='object-contain'
         />
+        
+      <div className='hero__image-overlay'/>
       </div>
-      
       </div>
     </div>
   )

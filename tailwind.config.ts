@@ -7,6 +7,8 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   mode: "jit",
+ 
+
   theme: {
     extend: {
       fontFamily: {
@@ -25,13 +27,16 @@ const config: Config = {
         },
         grey: "#747A88",
       },
+      daisyui: {
+        themes: ["light"],
+      },
       backgroundImage: {
         'pattern': "url('/pattern.png')",
         'hero-bg': "url('/hero-bg.png')"
       }
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
 
 export default config

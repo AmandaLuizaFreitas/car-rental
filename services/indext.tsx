@@ -15,14 +15,20 @@ export const getCarsList = async()=>{
       updatedAt
       model
       carType
+      carDoor
+      fueltype
+      year
+      
       image {
         url
       }
       carBrand
     }
+    
   }
   
   `
   const result = await request('https://api-sa-east-1.hygraph.com/v2/cln1ypzcd0vbf01t9gum77m0c/master',query);
   return result;
 } 
+

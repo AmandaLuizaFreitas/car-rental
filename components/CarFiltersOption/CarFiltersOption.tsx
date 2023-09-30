@@ -1,6 +1,6 @@
 import  { useEffect, useState } from 'react';
 
-export const CarFiltersOption = ({carList,setBrand}:any) => {
+export const CarFiltersOption = ({carList,setBrand,orderCarList}:any) => {
   const [brandList,setBrandList] = useState<any>();
 
   const BrandSet = new Set();
@@ -26,10 +26,13 @@ export const CarFiltersOption = ({carList,setBrand}:any) => {
         <p className='hidden md:block'>Explore o carro que você pode gostar</p>
       </div>
       <div className=' flex gap-3'>
-      <select className="select select-ghost w-full max-w-xs">
+      <select className="select select-ghost w-full max-w-xs"
+       onChange={(e)=>orderCarList(e.target.value)}
+      >
        <option disabled selected>Preço</option>
-       <option>Menor Preço</option>
-        <option>Maior Preço</option>
+       <option value={-1}>Menor Preço</option>
+        <option value={1}>Maior Preço</option>
+
    </select>
    <select className="select select-ghost  w-full md:block max-w-xs hidden" onChange={(e)=>setBrand(e.target.value)}>
        <option disabled selected>Fabricante</option>

@@ -19,12 +19,20 @@ export default function Home() {
  setCarList(filterList);
  };
 
+
   const getCarLists= async()=>{
     const result:any = await getCarsList()
     
     setCarList(result?.carLists)
     setCarOrgList(result?.carLists)
   } 
+  const orderCarList =(orde:any)=>{
+    const sorteData = [...carOrgList].sort((a,b)=>
+    orde == -1? a.price - b.price:b.price -a.price
+    )
+    setCarList(sorteData);
+
+  }
 
   useEffect(()=>{
     getCarLists()
@@ -35,7 +43,9 @@ export default function Home() {
     <div className='overflow-hidden'>
       <Hero/>
       <Searchunput/>
-      <CarFiltersOption carList={carOrgList} setBrand={(value:string)=> filterCarList(value)}/>
+      <CarFiltersOption
+      orderCarList = {(value:string)=>orderCarList(value)}
+      carList={carOrgList} setBrand={(value:string)=> filterCarList(value)}/>
       <Carlist carList={carList}/>
     </div>
   )

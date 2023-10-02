@@ -12,8 +12,8 @@ export const NavBar = () => {
       
       <div className="hidden md:flex">
         <ul className="flex gap-5">
-          <li><a href="#" className="hover:bg-blue-500 p-2  px-3 rounded-full hover:text-white cursor-pointer font-medium">Histórico</a></li>
-          <li><a href="#" className="hover:bg-blue-500 p-2 px-3  rounded-full hover:text-white cursor-pointer ">Contato</a></li>
+          <li><Link  href="" className="hover:bg-blue-500 p-2  px-3 rounded-full hover:text-white cursor-pointer font-medium">Histórico</Link ></li>
+          <li><Link href="" className="hover:bg-blue-500 p-2 px-3  rounded-full hover:text-white cursor-pointer ">Contato</Link ></li>
         </ul>
       </div>
        <div className="mr-5">

@@ -15,7 +15,7 @@ export const CarFiltersOption = ({carList,setBrand,orderCarList}:any) => {
   carList.forEach((e:any)=>{
     BrandSet.add(e.carBrand)
   });
-  console.log(BrandSet)
+ 
   setBrandList(Array.from(BrandSet))
  };
 

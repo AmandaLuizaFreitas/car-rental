@@ -1,17 +1,15 @@
-import React from 'react'
-import { CarCar } from '../CarCar/CarCar'
-import { Form } from './Form'
 import Image from 'next/image';
-import {PiSteeringWheelFill} from 'react-icons/pi';
-import {MdAirlineSeatReclineNormal} from 'react-icons/md';
-import {FaGasPump} from 'react-icons/fa';
-import{AiOutlineClose} from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
+import { FaGasPump } from 'react-icons/fa';
+import { MdAirlineSeatReclineNormal } from 'react-icons/md';
+import { PiSteeringWheelFill } from 'react-icons/pi';
+
 
 export const BookinModal = ({car}:any) => {
 
   
   return (
-    <div className="modal-box w-11/12 max-w-5xl">
+    <div className="modal-box w-11/12 max-w-5xl items-center">
       <div className='modal-action '>
         <form method="dialog m-auto ">
       <button className="btn  bg-primary-blue-100">
@@ -22,22 +20,22 @@ export const BookinModal = ({car}:any) => {
       <div className='border-b-[1px] pb-2'>
     <h3 className="font-bold text-lg text-gray-400">Alugue um carro agora!</h3>
     </div>
-    <div className='grid grid-cols-1 md:grid-cols-2'>
+    <div className='grid grid-cols-1 md:grid-cols-1'>
       <div className='m-5  p-5'>
-      <div className='bg-primary-blue-100 p-5'>
-      <div className="car-card__content">
-      <h2 className="car-card__content-title">
+      <div className='bg-primary-blue-100 p-5 flex justify-center items-center flex-col'>
+      <div className="w-full flex justify-center items-cente gap-2 ">
+      <h2 className="text-[22px] leading-[26px] font-bold capitalize ">
           {car?.name} {car?.model}
         </h2>
       </div>
 
-      <p className='flex mt-6 text-[32px] leading-[38px] font-extrabold'>
+      <p className='flex mt-6 text-[32px] leading-[38px] font-extrabold justify-center'>
         <span className='self-start text-[14px] leading-[17px] font-semibold'>$</span>
         {car?.price}
         <span className='self-end text-[14px] leading-[17px] font-medium'>/dia</span>
       </p>
 
-      <div className='relative w-full h-40 my-3 object-contain'>
+      <div className='relative w-full h-40 my-3 flex justify-center object-contain'>
         <Image src={car?.image?.url}  alt='image do carro' width={220} height={200}/>
       </div>
       
@@ -58,21 +56,21 @@ export const BookinModal = ({car}:any) => {
       </ul>
       </div>
       <ul className='mt-5 text-start   '>
-        <li className='flex  items-center justify-between  bg-purple-50 mb-3 py-1 px-2 '>
+        <li className='flex  items-center justify-between  bg-primary-blue-100 mb-3 py-1 px-2 '>
           <span className='font-medium'>Portas </span>  
           
-          <span> {car?.carDoor}</span>
+         {car?.carDoor}
         </li>
-        <li className='flex  items-center justify-between bg-purple-50  mb-3 py-1 px-2'>
+        <li className='flex  items-center justify-between bg-primary-blue-100   mb-3 py-1 px-2'>
         <span className='font-medium'> Combustível </span> 
         
           
-          <span> {car?.fueltype}</span>
+           {car?.fueltype}
         </li>
-        <li className='flex  items-center justify-between bg-purple-50  mb-3 py-1 px-2'>
+        <li className='flex  items-center justify-between bg-primary-blue-100   mb-3 py-1 px-2'>
         <span className='font-medium'>Ano </span> 
           
-          <span> {car?.year}</span>
+          {car?.year}
         </li>
       </ul>
       <div>
@@ -80,13 +78,7 @@ export const BookinModal = ({car}:any) => {
       </div>
       </div>
 
-      <div className='modal-action'>
-      <form  className='flex items-center justify-center'>
-        <Form car={car}/>
       
-      </form>
-
-      </div>
       
     </div>
    

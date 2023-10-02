@@ -5,12 +5,14 @@ import { CarFiltersOption } from '@/components/CarFiltersOption/CarFiltersOption
 import { Hero } from '@/components/Hero/Hero';
 import { Searchunput } from '@/components/SearchInput/SearchInput';
 import { getCarsList } from '@/services/indext';
-import Image from 'next/image'
+
 import { Carlist } from '@/components/Carlist/Carlist';
+
 
 export default function Home() {
  const [carList,setCarList] = useState<any>([]);
  const [carOrgList,setCarOrgList] = useState<any>([]);
+
 
  const filterCarList = (brand:string) =>{
  const filterList = carOrgList.filter((item:any) =>
@@ -34,6 +36,8 @@ export default function Home() {
 
   }
 
+ 
+  
   useEffect(()=>{
     getCarLists()
     
@@ -41,12 +45,15 @@ export default function Home() {
 
   return (
     <div className='overflow-hidden'>
+      
       <Hero/>
       <Searchunput/>
       <CarFiltersOption
       orderCarList = {(value:string)=>orderCarList(value)}
       carList={carOrgList} setBrand={(value:string)=> filterCarList(value)}/>
       <Carlist carList={carList}/>
+     
+      
     </div>
   )
 }

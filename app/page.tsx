@@ -9,6 +9,10 @@ import { getCarsList } from '@/services/indext';
 import { Carlist } from '@/components/Carlist/Carlist';
 
 
+
+
+
+
 export default function Home() {
  const [carList,setCarList] = useState<any>([]);
  const [carOrgList,setCarOrgList] = useState<any>([]);
@@ -36,7 +40,7 @@ export default function Home() {
 
   }
 
- 
+  
   
   useEffect(()=>{
     getCarLists()
@@ -45,7 +49,7 @@ export default function Home() {
 
   return (
     <div className='overflow-hidden'>
-      
+  
       <Hero/>
       <Searchunput/>
       <CarFiltersOption
@@ -53,7 +57,7 @@ export default function Home() {
       carList={carOrgList} setBrand={(value:string)=> filterCarList(value)}/>
       <Carlist carList={carList}/>
      
-      
+     
     </div>
   )
 }

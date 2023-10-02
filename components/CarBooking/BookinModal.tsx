@@ -5,6 +5,7 @@ import { MdAirlineSeatReclineNormal } from 'react-icons/md';
 import { PiSteeringWheelFill } from 'react-icons/pi';
 
 
+
 export const BookinModal = ({car}:any) => {
 
   
@@ -77,7 +78,7 @@ export const BookinModal = ({car}:any) => {
         
       </div>
       </div>
-
+     
       
       
     </div>

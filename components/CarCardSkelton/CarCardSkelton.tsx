@@ -9,7 +9,7 @@ export const CarCardSkelton = () => {
         <div className="animate-pulse flex space-x-4">
           <div className="rounded-md 
           bg-slate-200 h-[368px] 
-          w-[330px]"></div>
+          w-[430px]"></div>
         </div>
       </div>
    

@@ -36,9 +36,7 @@ export const CarFiltersOption = ({carList,setBrand,orderCarList}:any) => {
    </select>
    <select className="select select-ghost  w-full md:block max-w-xs hidden" onChange={(e)=>setBrand(e.target.value)}>
        <option disabled selected>Fabricante</option>
-       {brandList&&brandList.map((brand:string,index:number)=>(
-              <option key={index}>{brand}</option>
-            ))}
+       {brandList&&brandList.map((brand:string,index:number)=>( <option key={index}>{brand}</option>))}
        
    </select>
      

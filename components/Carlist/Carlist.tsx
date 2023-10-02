@@ -25,14 +25,11 @@ export const Carlist = (props:any) => {
       <div key={index} onClick={()=>{(window as any).my_modal_4.showModal();setSelectedCar(car)}}>
        <CarCar car={car}/>
        </div>
-      
-       
-       
     ))}
    
    {isLoaded?
         [1,2,3,4,5].map((item)=>(
-          <CarCardSkelton/>  
+          <CarCardSkelton />  
         ))
         :null}   
 

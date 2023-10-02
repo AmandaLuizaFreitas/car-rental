@@ -2,13 +2,9 @@
 > Projeto  que ofereça um site de aluguel de carro 
 
 
-
-
-=======
-
 ## 🚀 Tecnologias
 
-**Foi usado :**  `ReactJS` , `Tailwind CSS  `, `css`,
+> **Foi usado :**  `ReactJS` , `Tailwind CSS  `, `css`,
 `HyGraph` , `Typescript`,`headless` , `NextJs`,`DaisyUi`
 
 ## Aprendizados

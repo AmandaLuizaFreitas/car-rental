@@ -24,6 +24,7 @@
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
     "daisyui": "^3.8.1",
+    "encoding": "^0.1.13",
     "postcss": "latest",
     "tailwindcss": "latest",
     "typescript": "latest"

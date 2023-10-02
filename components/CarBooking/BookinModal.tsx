@@ -13,7 +13,7 @@ export const BookinModal = ({car}:any) => {
     <div className="modal-box w-11/12 max-w-5xl items-center">
       <div className='modal-action '>
         <form method="dialog m-auto ">
-      <button className="btn  bg-primary-blue-100">
+      <button className="btn  bg-blue-200">
       <AiOutlineClose/>
         </button> 
       </form>

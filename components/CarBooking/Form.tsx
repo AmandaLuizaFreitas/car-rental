@@ -124,7 +124,7 @@ export const Form =({car}:any) => {
         <label className="text-gray-400">Número de Contato</label>
         <input
           type="text"
-          placeholder="Type here"
+          placeholder="(00)00000000"
           onChange={handleChange}
           name="contactNumber"
           className="input input-bordered w-full max-w-lg"

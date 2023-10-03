@@ -62,7 +62,7 @@ export const createBooking = async (formValue:any) =>{
   }
   
   `
-  const result = await request(MASTER_URL,mutationQuery);
+  const result=await request(MASTER_URL , mutationQuery);
   return result;
 }
 

@@ -48,6 +48,14 @@ export default function Home() {
     getCarLists()
     
   },[]);
+  useEffect(()=>{
+    if(showToastMsg)
+    {
+      setTimeout(function(){
+        setShowToastMsg(false)
+      },4000);
+    }
+  },[showToastMsg])
 
   return (
     <div className='overflow-hidden'>
@@ -58,7 +66,7 @@ export default function Home() {
       orderCarList = {(value:string)=>orderCarList(value)}
       carList={carOrgList} setBrand={(value:string)=> filterCarList(value)}/>
       <Carlist carList={carList}/>
-         {showToastMsg? <ToastMsg/>: null }
+         {showToastMsg? <ToastMsg msg={'Reserva criada com sucesso!'}/>: null }
          
       </BookCreatedFlagContext.Provider>
      

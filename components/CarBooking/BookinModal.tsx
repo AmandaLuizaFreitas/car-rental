@@ -3,6 +3,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { FaGasPump } from 'react-icons/fa';
 import { MdAirlineSeatReclineNormal } from 'react-icons/md';
 import { PiSteeringWheelFill } from 'react-icons/pi';
+import { Form } from './Form';
 
 
 
@@ -21,7 +22,7 @@ export const BookinModal = ({car}:any) => {
       <div className='border-b-[1px] pb-2'>
     <h3 className="font-bold text-lg text-gray-400">Alugue um carro agora!</h3>
     </div>
-    <div className='grid grid-cols-1 md:grid-cols-1'>
+    <div className='grid grid-cols-1 md:grid-cols-2 p-5'>
       <div className='m-5  p-5'>
       <div className='bg-primary-blue-100 p-5 flex justify-center items-center flex-col'>
       <div className="w-full flex justify-center items-cente gap-2 ">
@@ -74,12 +75,15 @@ export const BookinModal = ({car}:any) => {
           {car?.year}
         </li>
       </ul>
-      <div>
-        
-      </div>
+     
       </div>
      
+      <div>
+      <form method="dialog">
+      < Form car={car}/>
+      </form>
       
+      </div>
       
     </div>
    

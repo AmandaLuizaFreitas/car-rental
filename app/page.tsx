@@ -7,8 +7,7 @@ import { Searchunput } from '@/components/SearchInput/SearchInput';
 import { getCarsList } from '@/services/indext';
 
 import { Carlist } from '@/components/Carlist/Carlist';
-import { BookCreatedFlagContext } from '@/context/BookCreatedFlagContext';
-import { ToastMsg } from '@/components/ToastMsg/ToastMsg';
+
 
 
 
@@ -18,7 +17,7 @@ import { ToastMsg } from '@/components/ToastMsg/ToastMsg';
 export default function Home() {
  const [carList,setCarList] = useState<any>([]);
  const [carOrgList,setCarOrgList] = useState<any>([]);
- const [showToastMsg,setShowToastMsg]= useState<boolean>(false);
+
 
  const filterCarList = (brand:string) =>{
  const filterList = carOrgList.filter((item:any) =>
@@ -48,27 +47,20 @@ export default function Home() {
     getCarLists()
     
   },[]);
-  useEffect(()=>{
-    if(showToastMsg)
-    {
-      setTimeout(function(){
-        setShowToastMsg(false)
-      },4000);
-    }
-  },[showToastMsg])
+ 
 
   return (
     <div className='overflow-hidden'>
-     <BookCreatedFlagContext.Provider value={{showToastMsg,setShowToastMsg}}>
+   
       <Hero/>
       <Searchunput/>
       <CarFiltersOption
       orderCarList = {(value:string)=>orderCarList(value)}
       carList={carOrgList} setBrand={(value:string)=> filterCarList(value)}/>
       <Carlist carList={carList}/>
-         {showToastMsg? <ToastMsg msg={'Reserva criada com sucesso!'}/>: null }
+        
          
-      </BookCreatedFlagContext.Provider>
+     
      
     </div>
   )

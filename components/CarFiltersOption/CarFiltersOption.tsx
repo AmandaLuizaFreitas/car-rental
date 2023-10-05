@@ -39,7 +39,7 @@ export const CarFiltersOption = ({carList,setBrand,orderCarList}:any) => {
        {brandList&&brandList.map((brand:string,index:number)=>( <option key={index}>{brand}</option>))}
        
    </select>
-     
+    
       </div>
     </div>
   )

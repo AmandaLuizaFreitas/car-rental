@@ -1,6 +1,6 @@
 import { NavBar } from '@/components/NavBar/NavBar'
 import './globals.css'
-import { ClerkProvider,SignIn, SignedIn, SignedOut } from '@clerk/nextjs'
+
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Footer } from '@/components/Footer/Footer'
@@ -19,18 +19,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="light">
-      <ClerkProvider>
+      
       <body className={inter.className}>
-        <SignedIn>
+       
           <NavBar/>
         {children}
-        </SignedIn>
-        <SignedOut>
-          <SignIn/>
-        </SignedOut>
+        
+        
+          
+       
         <Footer/>
         </body>
-      </ClerkProvider>
+      
     </html>
   )
 }

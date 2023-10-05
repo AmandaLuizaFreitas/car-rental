@@ -55,7 +55,7 @@ export const CarCar = (props:any) => {
             
           />
     </div>
-    
+   
     </div>
   )
 }

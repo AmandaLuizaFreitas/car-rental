@@ -11,6 +11,8 @@ export const CarCardSkelton = () => {
           bg-slate-200 h-[368px] 
           w-[430px]"></div>
         </div>
+
+        
       </div>
    
  </div>

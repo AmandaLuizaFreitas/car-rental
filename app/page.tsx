@@ -7,6 +7,7 @@ import { Searchunput } from '@/components/SearchInput/SearchInput';
 import { getCarsList } from '@/services/indext';
 
 import { Carlist } from '@/components/Carlist/Carlist';
+import { CustomButton } from '@/components/CustomButton/CustomButton';
 
 
 
@@ -59,7 +60,7 @@ export default function Home() {
       carList={carOrgList} setBrand={(value:string)=> filterCarList(value)}/>
       <Carlist carList={carList}/>
         
-         
+        
      
      
     </div>

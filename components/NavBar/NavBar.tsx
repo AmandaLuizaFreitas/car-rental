@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Image from "next/image";
 
 
-
 export const NavBar = () => {
   return (
    
@@ -17,9 +16,7 @@ export const NavBar = () => {
       
       
        <div className="mr-5">
-       <button className='btn bg-slate-100'>
-        Login
-       </button>
+       <button>Login</button>
        </div>
        </nav>
     </div >

@@ -9,7 +9,7 @@ export const Hero = () => {
     <div className='hero '>
       <div className='flex-1 pt-36 padding-x'>
         <h1 className='hero__title'> 
-        Digija seus sonhos hoje!</h1>
+        Dirija seus sonhos hoje!</h1>
         <p className='hero__subtitle'>
         Expermente a liberdade da estrada com o aluguel de carros RodoAluga.Escolha entre uma variedade de veículos para atender ás suas necessidades.
        </p>

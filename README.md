@@ -11,3 +11,13 @@
 
 * O uso do HyGraph, Headless e Daisyui
 
+## Layout 
+
+![RodoAluga](https://github.com/user-attachments/assets/d1a9edb4-eacf-4e0b-a7dd-7c00c7835474)
+ 
+
+
+ ###  Link
+ [Link do site ](https://car-rental-lake.vercel.app/)
+
+
